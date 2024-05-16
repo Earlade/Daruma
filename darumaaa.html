@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
+            .container {
+                max-width: 1440px;
+                width: 100vw;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+            }
+            .container > img {
+                width: 20%;
+                height: auto;
+                position: absolute;
+                bottom: 50;
+                transform-origin: bottom center;
+                animation-name: daruma;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+            .container > img:hover {
+                animation-name: jump;
+                animation-duration: 1.2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+            }
+            @keyframes jump {
+                50% {bottom: 100;}
+                100% {bottom: 50;}
+            }
+            @keyframes daruma {
+                0%, 100% { transform: rotate(0deg); }
+                25% { transform: rotate(20deg); }
+                75% { transform: rotate(-20deg); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="D:\Front End\ForFun\Japanese\Img\daruma.png">
+        </div>
+    </body>
+</html>
